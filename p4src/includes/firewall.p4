@@ -34,7 +34,7 @@ control Firewall( inout headers_t hdr,
             firewall_tb.apply();
         }
         else if ( hdr.icmp.isValid() ) {
-            /** Drop all ICMP traffic including iith private IP */
+            /** Drop all ICMP traffic including private IP */
             drop();
         }
         else {
